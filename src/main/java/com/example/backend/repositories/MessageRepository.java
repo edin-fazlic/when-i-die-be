@@ -1,10 +1,10 @@
 package com.example.backend.repositories;
 
-import com.example.backend.models.entities.Users;
+import com.example.backend.models.entities.Message;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface RelationshipsRepository extends JpaRepository<Users, Long> {
+public interface MessageRepository extends JpaRepository<Message, Long> {
 
 }

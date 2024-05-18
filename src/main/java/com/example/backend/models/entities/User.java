@@ -14,7 +14,7 @@ import java.util.Date;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Users{
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -32,7 +32,7 @@ public class Users{
     private String password;
 
     @Column(name="status", nullable = false)
-    private String status;
+    private String status; // what is this status for?
 
     @Column(name="lastLoggedIn", nullable = false)
     private Date lastLoggedIn;
