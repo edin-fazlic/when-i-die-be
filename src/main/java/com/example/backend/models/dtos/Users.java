@@ -1,9 +1,8 @@
-package com.example.backend.models.entities;
+package com.example.backend.models.dtos;
 
-import java.rmi.server.UID;
 import java.util.Date;
 
-public class Users{
+public class Users {
     private long id;
     private String name;
     private String surname;
@@ -11,6 +10,4 @@ public class Users{
     private String password;
     private String status;
     private Date lastLoggedIn;
-    private boolean isDead;
 }
-
