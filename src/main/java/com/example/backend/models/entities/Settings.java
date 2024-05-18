@@ -1,19 +1,27 @@
 package com.example.backend.models.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.example.backend.models.enums.PassedAwayConfirmationType;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.Date;
 
+@Entity
+@Table(name = "settings")
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Settings {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name="deathCheck")
-    private Integer deathCheck;
+    @Column(name="deathCheck", nullable = false)
+    private PassedAwayConfirmationType deathCheck;
 
     @Column(name="checkAfterDays")
     private Integer checkAfterDays;

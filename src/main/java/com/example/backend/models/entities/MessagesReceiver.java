@@ -5,28 +5,26 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.antlr.v4.runtime.misc.NotNull;
 
 @Entity
-@Table(name = "relationships")
+@Table(name = "message_receiver")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Relationships {
+public class MessagesReceiver {
+    // todo: since there are no additional properties, other than making the connection
+    // between the two tables, remove the class and use @ManyToMany
+    // https://www.baeldung.com/jpa-many-to-many
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @ManyToOne
     @JoinColumn(name = "users", referencedColumnName = "id", nullable = false)
-    private Users sender;
+    private User receiver;
 
     @ManyToOne
     @JoinColumn(name = "users", referencedColumnName = "id", nullable = false)
-    private Users receiver;
-
-    @Column(name="status", nullable = false)
-    private String status;
-
+    private Message message;
 }
