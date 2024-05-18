@@ -2,7 +2,7 @@ package com.example.backend.models.entities;
 
 import jakarta.persistence.*;
 
-public class MessageReceivers {
+public class MessagesReceivers {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
