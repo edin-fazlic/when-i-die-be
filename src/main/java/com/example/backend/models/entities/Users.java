@@ -11,5 +11,6 @@ public class Users{
     private String password;
     private String status;
     private Date lastLoggedIn;
+    private boolean isDead;
 }
 
