@@ -1,7 +1,7 @@
 package com.example.backend.services;
 
 import com.example.backend.models.dtos.TrustedPersonResponse;
-import com.example.backend.models.dtos.UserWhoTrustsMeResponse;
+import com.example.backend.models.dtos.UsersWhoTrustsMeResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -29,7 +29,7 @@ public class TPCService {
         return null;
     }
 
-    public ResponseEntity<List<UserWhoTrustsMeResponse>> getTrustMe() {
+    public ResponseEntity<List<UsersWhoTrustsMeResponse>> getTrustMe() {
         return null;
     }
 }

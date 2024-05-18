@@ -10,11 +10,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/message")
-public class MessageController {
+public class MessagesController {
 
     private final MessageService messageService;
 
-    public MessageController(MessageService messageService) {
+    public MessagesController(MessageService messageService) {
         this.messageService = messageService;
     }
 

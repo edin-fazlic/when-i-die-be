@@ -1,6 +1,6 @@
 package com.example.backend.models.dtos;
 
-public class UserWhoTrustsMeResponse {
+public class UsersWhoTrustsMeResponse {
     private long id;
     private String name;
     private String surname;
